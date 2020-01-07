@@ -1,28 +1,49 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <Quote quote="This is a new quote">
+                    <h1>Quote 1</h1>
+                    <p>Another quote</p>
+                </Quote>
+                <button @click="selectedApp='Blue'">Use Blue</button>
+                <button @click="selectedApp='Green'">Use Green</button>
+                <button @click="selectedApp='Red'">Use Red</button>
+                <component :is="selectedApp"><p>This is a new quote</p></component>
+                <!-- <Blue><p>This is a new quote</p></Blue>
+                <Green><p>This is a new quote</p></Green>
+                <Red><p>This is a new quote</p></Red> -->
+                <app-user></app-user>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+    import User from './components/User.vue';
+    import Quote from './components/Quote.vue'
+    import Red from './components/Red.vue'
+    import Blue from './components/Blue.vue'
+    import Green from './components/Green.vue'
+    export default {
+        data:function(){
+            return{
+                selectedApp: 'Blue'
+            }
+        },
+        components: {
+            appUser: User,
+            Quote,
+            Red,
+            Green,
+            Blue
+        }
+    }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    div.component {
+        border: 1px solid black;
+        padding: 30px;
+    }
 </style>

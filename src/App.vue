@@ -8,6 +8,10 @@
                 <h4>topic/using-slot-component</h4>
                 <p>Shows the use case of slot and component vue elements</p>
             </li>
+            <li>
+                <h4>project/quoteApp</h4>
+                <p>An app to add and delete quotes</p>
+            </li>
         </ul>
         
     </div>

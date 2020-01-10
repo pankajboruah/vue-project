@@ -10,21 +10,21 @@
                         <input
                                 type="text"
                                 id="email"
-                                class="form-control" v-model="userData.email">
+                                class="form-control" v-model.lazy="userData.email">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input
                                 type="password"
                                 id="password"
-                                class="form-control" v-model="userData.password">
+                                class="form-control" v-model.lazy="userData.password">
                     </div>
                     <div class="form-group">
                         <label for="age">Age</label>
                         <input
                                 type="number"
                                 id="age"
-                                class="form-control" v-model="userData.age">
+                                class="form-control" v-model.lazy="userData.age">
                     </div>
 
                 </div>

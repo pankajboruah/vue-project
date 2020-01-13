@@ -12,6 +12,10 @@
                 <h4>project/quoteApp</h4>
                 <p>An app to add and delete quotes</p>
             </li>
+            <li>
+                <h4>topic/using-forms</h4>
+                <p>Shows possible functionalities in a form</p>
+            </li>
         </ul>
         
     </div>
